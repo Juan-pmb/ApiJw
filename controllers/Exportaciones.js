@@ -24,7 +24,7 @@ const postExportaciones = async (req, res) => {
 }
 
 const putExportaciones = async (req, res) => {
-    const { Producto, Kilo, precioKilo, precioDolar } = req.body;
+    const { Producto, Kilo, precioKilo } = req.body;
     let mensaje;
 
     try {
@@ -35,7 +35,6 @@ const putExportaciones = async (req, res) => {
                 Producto: Producto,
                 Kilo: Kilo,
                 precioKilo: precioKilo,
-                precioDolar: precioDolar,
             }
         );
         mensaje = 'Actualización exitosa';

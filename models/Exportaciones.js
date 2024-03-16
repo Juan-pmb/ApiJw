@@ -14,12 +14,7 @@ const ExportacionesSchema = ({
     precioKilos:{
         type:Number,
         required:[true, ' el precio de los kilos  es requerido']
-    },
-    precioDolar: {
-        type: Number,
-        required: [false, 'el precio del dolar es necesario es requerido']
     }
-
 })
 
 
