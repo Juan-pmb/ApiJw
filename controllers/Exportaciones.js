@@ -24,17 +24,17 @@ const postExportaciones = async (req, res) => {
 }
 
 const putExportaciones = async (req, res) => {
-    const { Producto, Kilo, precioKilo } = req.body;
+    const { Producto, Kilos, precioKilos } = req.body;
     let mensaje;
 
     try {
         // Actualizar la asistencia con los datos proporcionados por el usuario
-        const exportaciones = await Exportaciones.findOneAndUpdate(
+        const exportaciones = await exportaciones.findOneAndUpdate(
             { Producto: Producto },
             {
                 Producto: Producto,
-                Kilo: Kilo,
-                precioKilo: precioKilo,
+                Kilos: Kilos,
+                precioKilos: precioKilos,
             }
         );
         mensaje = 'Actualización exitosa';
