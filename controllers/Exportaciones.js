@@ -29,7 +29,7 @@ const putExportaciones = async (req, res) => {
 
     try {
         // Actualizar la asistencia con los datos proporcionados por el usuario
-        const exportaciones = await exportaciones.findOneAndUpdate(
+        const exportaciones = await Exportaciones.findOneAndUpdate(
             { Producto: Producto },
             {
                 Producto: Producto,
