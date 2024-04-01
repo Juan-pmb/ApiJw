@@ -5,15 +5,15 @@ const route = Router()
 
 //Listar todos los datos
 //Importando el controlador
-const { getAsistencia, postAsistencia, putAsistencia, deleteAsistencia } = require('../controllers/Asistencia')
+const { getInsumos, postInsumos, putInsumos, deleteInsumos} = require('../controllers/Insumos')
 
-route.get('/', getAsistencia)
+route.get('/', getInsumos)
 
-route.post('/', postAsistencia)
+route.post('/', postInsumos)
 
-route.put('/', putAsistencia)
+route.put('/', putInsumos)
 
-route.delete('/', deleteAsistencia)
+route.delete('/', deleteInsumos)
 // //Consultar un dato
 // route.get('/consultarUsuario', (req, res) => {
 //     res.json({

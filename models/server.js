@@ -9,7 +9,8 @@ class Server{
     constructor(){
         this.app = express()
         this.port = process.env.PORT
-        this.servicioPath = '/Exportaciones' //Ruta de la API
+        this.exportacionesPath = '/Exportaciones'
+        this.insumosPath = '/Insumos' //Ruta de la API
         this.middlewares()
         this.routes()
         this.conectarDB()
@@ -23,7 +24,9 @@ class Server{
         )
     }
     routes(){
-        this.app.use(this.servicioPath, require('../routes/Exportaciones'))
+        this.app.use(this.exportacionesPath, require('../routes/Exportaciones'))
+        this.app.use(this.insumosPath, require('../routes/Insumos'))
+
 
     }
     
