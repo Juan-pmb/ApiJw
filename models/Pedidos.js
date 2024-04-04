@@ -22,7 +22,12 @@ const PedidosShema=({
     formaPago:{
         type: String,
         default: 'bancolombia', // Puedes establecer un valor predeterminado si lo deseas
-    }
+    },
+
+    residencia:{
+        type: String,
+        required: true,  
+      }
 
 })
 //especificando la estructura que va  a tener la conexión
