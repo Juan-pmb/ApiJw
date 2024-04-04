@@ -36,7 +36,7 @@ const putPedidos = async(req, res) =>{
     const {numPedido,nombreCliente,direccionEnvio,totalPago,formaPago }=req.body //desestructurar
 
 try{
-        const pedidos = await Pedidos.findOneAndUpdate({numPedido:numPedido},{nombreCliente:nombreCliente,direccionEnvio:direccionEnvio, totalPago:totalPago,formaPago:formaPago})//las primeras llaves son el valor por el cual voy a hacer la modificacion el segundo hace referencia a lo que el usuario envio
+        const pedidos = await Pedidos.findOneAndUpdate({nombreCliente:nombreCliente},{numPedido:numPedido,direccionEnvio:direccionEnvio, totalPago:totalPago,formaPago:formaPago})//las primeras llaves son el valor por el cual voy a hacer la modificacion el segundo hace referencia a lo que el usuario envio
        
         mensaje = 'actualizacion exitosa'
         
