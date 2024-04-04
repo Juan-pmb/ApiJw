@@ -49,12 +49,12 @@ try{
      
 }
 const deletePedidos = async (req, res) => {
-    const { numPedido } = req.body;
+    const { nombreCliente } = req.body;
     let mensaje;
 
     try {
         // Eliminar la asistencia con el documento proporcionado
-        const pedidos = await Pedidos.findOneAndDelete({ numPedido: numPedido });
+        const pedidos = await Pedidos.findOneAndDelete({ nombreCliente: nombreCliente });
         mensaje = 'Eliminación exitosa';
     } catch (error) {
         mensaje = error;
